@@ -22,15 +22,12 @@ export const Navbar = () => {
               <img src="##" alt="#" />
             </a>
           </div>
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-white focus:outline-none"
-            >
+          <div className="hidden md:block">
+            <button onClick={toggleMenu}>
               <svg
                 className="h-6 w-6"
                 fill="none"
-                stroke="currentColor"
+                stroke="black"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -43,7 +40,7 @@ export const Navbar = () => {
               </svg>
             </button>
           </div>
-          <div className={`hidden gap-8 md:flex ${isMenuOpen ? "" : "hidden"}`}>
+          <div className={`flex gap-8 ${isMenuOpen ? "" : "block"} md:hidden`}>
             <a href="##">HOME</a>
             <a href="##">ABOUT</a>
             <a href="##">MENU</a>
@@ -53,19 +50,14 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {isMenuOpen && (
-        <div
-          onClick={closeMenu}
-          className="fixed inset-0 z-50 bg-black opacity-50"
-        ></div>
-      )}
+      {isMenuOpen && <div onClick={closeMenu}></div>}
 
       <div
-        className={`fixed right-0 z-50 w-full transform  bg-white ${
+        className={`fixed right-0 h-full w-full transform backdrop-blur-sm ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        <div className="flex flex-col items-center gap-8">
+        <div className="mt-16 flex flex-col items-center gap-12">
           <a href="##" onClick={closeMenu}>
             HOME
           </a>

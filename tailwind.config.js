@@ -3,12 +3,24 @@ module.exports = {
   content: ["./src/parts/*.jsx", "./src/components/*.jsx"],
   theme: {
     extend: {},
-    colors: {
-      "1st": "#F3EEEA",
-      "2nd": "#B0A695",
-      "3rd": "#776B5D",
-      "4th": "#577367",
-      // bgc: "#f6f6f6",
+    screens: {
+      "2xl": { max: "1535px" },
+      // => @media (max-width: 1535px) { ... }
+
+      xl: { max: "1279px" },
+      // => @media (max-width: 1279px) { ... }
+
+      lg: { max: "1023px" },
+      // => @media (max-width: 1023px) { ... }
+
+      md: { max: "767px" },
+      // => @media (max-width: 767px) { ... }
+
+      sm: { max: "400px" },
+      // => @media (max-width: 400px) { ... }
+
+      xs: { max: "300px" },
+      // => @media (max-width: 300px) { ... }
     },
   },
   plugins: [],

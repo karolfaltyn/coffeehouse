@@ -1,17 +1,9 @@
-import { Navbar } from "./parts/Navbar";
-import { Hero } from "./parts/Hero";
-import { AboutUs } from "./parts/AboutUs";
-import { Menu } from "./parts/Menu";
+import { Home } from "./pages/Home";
 
 export const App = () => {
   return (
     <>
-      <Navbar />
-      <main className="scroll-container">
-        <Hero />
-        <AboutUs />
-        <Menu />
-      </main>
+      <Home />
     </>
   );
 };

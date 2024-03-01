@@ -17,7 +17,7 @@ export const Navbar = () => {
       <div className="container">
         <div className="flex items-center justify-between py-6">
           <div>
-            <a href="##" className="flex gap-4">
+            <a href="#home" className="flex gap-4">
               COFFEEHOUSE
               <img src="##" alt="#" />
             </a>
@@ -41,11 +41,11 @@ export const Navbar = () => {
             </button>
           </div>
           <div className={`flex gap-8 ${isMenuOpen ? "" : "block"} md:hidden`}>
-            <a href="##">HOME</a>
-            <a href="##">ABOUT</a>
-            <a href="##">MENU</a>
-            <a href="##">REVIEWS</a>
-            <a href="##">CONTACT</a>
+            <a href="#home">HOME</a>
+            <a href="#about-us">ABOUT US</a>
+            <a href="#coffee-types">COFFEE</a>
+            <a href="#reviews">REVIEWS</a>
+            <a href="#contact">CONTACT</a>
           </div>
         </div>
       </div>
@@ -58,19 +58,19 @@ export const Navbar = () => {
         } transition-transform duration-300 ease-in-out`}
       >
         <div className="mt-16 flex flex-col items-center gap-12">
-          <a href="##" onClick={closeMenu}>
+          <a href="#home" onClick={closeMenu}>
             HOME
           </a>
-          <a href="##" onClick={closeMenu}>
-            ABOUT
+          <a href="#about-us" onClick={closeMenu}>
+            ABOUT US
           </a>
-          <a href="##" onClick={closeMenu}>
-            MENU
+          <a href="#coffee-types" onClick={closeMenu}>
+            COFFEE
           </a>
-          <a href="##" onClick={closeMenu}>
+          <a href="#reviews" onClick={closeMenu}>
             REVIEWS
           </a>
-          <a href="##" onClick={closeMenu}>
+          <a href="#contact" onClick={closeMenu}>
             CONTACT
           </a>
         </div>

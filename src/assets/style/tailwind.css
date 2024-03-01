@@ -24,3 +24,17 @@ section {
 .max-ch {
   max-width: 60ch;
 }
+
+.bg-gradient {
+  background: linear-gradient(
+    to right,
+    #f3eeea 0%,
+    #f3eeea 75%,
+    #776b5d 75%,
+    #776b5d 100%
+  );
+}
+
+.hero-img {
+  width: 30rem;
+}

@@ -2,7 +2,7 @@ import "../assets/style/style.css";
 
 export const AboutUs = () => {
   return (
-    <section className="flex items-center">
+    <section className="flex items-center" id="about-us">
       <div className="container">
         <div className="flex items-center justify-around md:flex-col md:gap-64">
           <div className="">

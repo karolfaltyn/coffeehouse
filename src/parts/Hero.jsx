@@ -7,7 +7,7 @@ export const Hero = () => {
     <section className=" bg-gradient flex items-center" id="home">
       <div className="container">
         <div className="flex items-center justify-around md:flex-col-reverse md:gap-32">
-          <div className="">
+          <div>
             <header>
               <h1 className="mb-4 text-7xl font-bold">ENJOY THE MOMENT</h1>
               <a

@@ -9,17 +9,17 @@ export const Hero = () => {
         <div className="flex items-center justify-around md:flex-col-reverse md:gap-32">
           <div>
             <header>
-              <h1 className="mb-4 text-7xl font-bold">ENJOY THE MOMENT</h1>
+              <h1 className="mb-4 text-5xl font-bold">ENJOY THE MOMENT</h1>
               <a
                 href="##"
-                className="text-5xl font-semibold underline decoration-wavy"
+                className="text-3xl font-semibold underline decoration-wavy"
               >
                 @ THE COFFEEHOUSE
               </a>
-              <p className="mb-8 mt-8 text-3xl">
+              <p className="mb-8 mt-8 text-2xl">
                 The best coffee bean for every cup of your coffee.
               </p>
-              <a href="##" className=" text-3xl">
+              <a href="##" className=" text-2xl">
                 MENU
               </a>
               <br />

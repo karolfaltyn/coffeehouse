@@ -1,14 +1,14 @@
 import "../assets/style/style.css";
 
-export const AboutUs = () => {
+export const Info = () => {
   const barista = require("../assets/images/on-pages/barista-collage.png");
 
   return (
-    <section className="flex items-center" id="about-us">
+    <section className="flex items-center" id="info">
       <div className="container">
-        <div className="flex items-center justify-around gap-16 md:flex-col  md:gap-8">
+        <div className="flex items-center gap-16 md:flex-col md:gap-8">
           <div className="flex md:justify-center">
-            <img src={barista} alt="employees" className="md:w-9/12 " />
+            <img src={barista} alt="employees" className="md:w-9/12" />
           </div>
 
           <div className="max-ch">
@@ -25,7 +25,6 @@ export const AboutUs = () => {
             <a href="##" className="font-semibold underline decoration-wavy">
               Read More
             </a>
-            <br />
           </div>
         </div>
       </div>

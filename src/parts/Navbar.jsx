@@ -41,11 +41,21 @@ export const Navbar = () => {
             </button>
           </div>
           <div className={`flex gap-8 ${isMenuOpen ? "" : "block"} md:hidden`}>
-            <a href="#home">HOME</a>
-            <a href="#about-us">ABOUT US</a>
-            <a href="#coffee-types">COFFEE</a>
-            <a href="#reviews">REVIEWS</a>
-            <a href="#contact">CONTACT</a>
+            <a href="#home" className="hover:opacity-70">
+              HOME
+            </a>
+            <a href="#info" className="hover:opacity-70">
+              INFO
+            </a>
+            <a href="#coffee-types" className="hover:opacity-70">
+              COFFEE
+            </a>
+            <a href="#reviews" className="hover:opacity-70">
+              REVIEWS
+            </a>
+            <a href="#contact" className="hover:opacity-70">
+              CONTACT
+            </a>
           </div>
         </div>
       </div>
@@ -57,20 +67,44 @@ export const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        <div className="mt-16 flex flex-col items-center gap-12">
-          <a href="#home" onClick={closeMenu}>
+        <div className="mt-8 flex flex-col items-center gap-8">
+          <a
+            href="#home"
+            onClick={closeMenu}
+            className="rounded-md border border-black bg-white px-8 py-4 text-4xl font-semibold hover:opacity-70"
+          >
             HOME
           </a>
-          <a href="#about-us" onClick={closeMenu}>
-            ABOUT US
+          <hr className="w-9/12 border border-black" />
+          <a
+            href="#info"
+            onClick={closeMenu}
+            className="rounded-md border border-black bg-white px-8 py-4 text-4xl font-semibold hover:opacity-70"
+          >
+            INFO
           </a>
-          <a href="#coffee-types" onClick={closeMenu}>
+          <hr className="w-9/12 border border-black" />
+          <a
+            href="#coffee-types"
+            onClick={closeMenu}
+            className="rounded-md border border-black bg-white px-8 py-4 text-4xl font-semibold hover:opacity-70"
+          >
             COFFEE
           </a>
-          <a href="#reviews" onClick={closeMenu}>
+          <hr className="w-9/12 border border-black" />
+          <a
+            href="#reviews"
+            onClick={closeMenu}
+            className="rounded-md border border-black bg-white px-8 py-4 text-4xl font-semibold hover:opacity-70"
+          >
             REVIEWS
           </a>
-          <a href="#contact" onClick={closeMenu}>
+          <hr className="w-9/12 border border-black" />
+          <a
+            href="#contact"
+            onClick={closeMenu}
+            className="rounded-md border border-black bg-white px-8 py-4 text-4xl font-semibold hover:opacity-70"
+          >
             CONTACT
           </a>
         </div>

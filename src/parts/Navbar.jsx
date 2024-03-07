@@ -3,6 +3,8 @@ import { Outlet, Link } from "react-router-dom";
 import "../assets/style/style.css";
 
 export const Navbar = () => {
+  const coffee_svg = require("../assets/images/svg/bx-coffee.svg").default;
+
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,9 +20,9 @@ export const Navbar = () => {
       <div className="container">
         <div className="flex items-center justify-between py-6">
           <div>
-            <Link to="/" className="flex gap-4">
+            <Link to="/" className="flex gap-2 font-semibold hover:opacity-70">
               COFFEEHOUSE
-              <img src="##" alt="#" className="sm:hidden" />
+              <img src={coffee_svg} alt="logo" className="sm:hidden" />
             </Link>
           </div>
           <div className="hidden md:block">

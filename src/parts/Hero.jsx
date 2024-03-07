@@ -5,17 +5,17 @@ export const Hero = () => {
   const hero_img = require("../assets/images/on-pages/cappuccino.jpg");
 
   return (
-    <section className="bg-gradient flex items-center" id="home">
+    <section className="flex items-center" id="home">
       <div className="container">
-        <div className="flex items-center justify-center gap-16 md:flex-col md:gap-8">
+        <div className="flex items-center justify-center gap-16 lg:flex-col lg:gap-8">
           <div className="max-ch">
             <header>
-              <h1 className="mb-4 text-5xl font-bold">ENJOY THE MOMENT</h1>
+              <h1 className="mb-4 text-4xl font-bold">ENJOY THE MOMENT</h1>
               <a href="##" className="text-3xl font-semibold">
-                @ THE COFFEEHOUSE
+                @thecoffeehouse
               </a>
             </header>
-            <p className="mb-4 text-2xl">
+            <p className="text-2xl">
               The best coffee bean for every cup of your coffee.
             </p>
             <Link
@@ -27,7 +27,7 @@ export const Hero = () => {
             <br />
           </div>
 
-          <div className="flex md:justify-center">
+          <div className="flex lg:justify-center">
             <img
               src={hero_img}
               alt="coffee"

@@ -6,9 +6,13 @@ export const Info = () => {
   return (
     <section className="flex items-center" id="info">
       <div className="container">
-        <div className="flex items-center gap-16 md:flex-col md:gap-8">
-          <div className="flex md:justify-center">
-            <img src={barista} alt="employees" className="md:w-9/12" />
+        <div className="flex items-center gap-16 lg:flex-col sm:gap-8">
+          <div className="flex lg:justify-center">
+            <img
+              src={barista}
+              alt="employees"
+              className="sm:8-12 lg:w-9/12 xs:hidden"
+            />
           </div>
 
           <div className="max-ch">

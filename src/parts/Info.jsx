@@ -22,7 +22,10 @@ export const Info = () => {
               we encourage you to bring your own thermal mug for takeaway
               options.
             </p>
-            <a href="##" className="font-semibold underline decoration-wavy">
+            <a
+              href="##"
+              className="font-semibold underline decoration-wavy hover:opacity-70"
+            >
               Read More
             </a>
           </div>

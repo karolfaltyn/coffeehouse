@@ -1,7 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import "../assets/style/style.css";
 
-export const CoffeeTypes = () => {
+export const CoffeeMenu = () => {
   const black = require("../assets/images/on-pages/black-coffee.jpg");
   const white = require("../assets/images/on-pages/white-coffee.jpg");
   const cold = require("../assets/images/on-pages/cold-coffee.jpg");
@@ -39,7 +39,7 @@ export const CoffeeTypes = () => {
             </h3>
             <Link
               to="/menu"
-              className="text-2xl font-semibold underline decoration-wavy hover:opacity-70"
+              className="font-semibold underline decoration-wavy"
             >
               MENU
             </Link>

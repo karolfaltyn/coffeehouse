@@ -1,3 +1,4 @@
+import { Outlet, Link } from "react-router-dom";
 import "../assets/style/style.css";
 
 export const Hero = () => {
@@ -6,7 +7,7 @@ export const Hero = () => {
   return (
     <section className="bg-gradient flex items-center" id="home">
       <div className="container">
-        <div className="flex items-center gap-16 md:flex-col md:gap-8">
+        <div className="flex items-center justify-center gap-16 md:flex-col md:gap-8">
           <div className="max-ch">
             <header>
               <h1 className="mb-4 text-5xl font-bold">ENJOY THE MOMENT</h1>
@@ -17,17 +18,25 @@ export const Hero = () => {
             <p className="mb-4 text-2xl">
               The best coffee bean for every cup of your coffee.
             </p>
-            <a href="##" className="text-2xl">
+            <Link
+              to="/menu"
+              className="text-2xl font-semibold underline decoration-wavy hover:opacity-70"
+            >
               MENU
-            </a>
+            </Link>
             <br />
           </div>
 
           <div className="flex md:justify-center">
-            <img src={hero_img} alt="coffee" className="md:w-9/12" />
+            <img
+              src={hero_img}
+              alt="coffee"
+              className="w-96 md:w-9/12 xs:hidden"
+            />
           </div>
         </div>
       </div>
+      <Outlet />
     </section>
   );
 };

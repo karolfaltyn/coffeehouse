@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Outlet, Link } from "react-router-dom";
 import "../assets/style/style.css";
 
 export const Navbar = () => {
@@ -17,10 +18,10 @@ export const Navbar = () => {
       <div className="container">
         <div className="flex items-center justify-between py-6">
           <div>
-            <a href="#home" className="flex gap-4">
+            <Link to="/" className="flex gap-4">
               COFFEEHOUSE
-              <img src="##" alt="#" />
-            </a>
+              <img src="##" alt="#" className="sm:hidden" />
+            </Link>
           </div>
           <div className="hidden md:block">
             <button onClick={toggleMenu}>
@@ -109,6 +110,7 @@ export const Navbar = () => {
           </a>
         </div>
       </div>
+      <Outlet />
     </nav>
   );
 };

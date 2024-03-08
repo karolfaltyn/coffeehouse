@@ -15,21 +15,21 @@ export const CoffeeTypes = () => {
               <img
                 src={black}
                 alt="black coffee"
-                className="w-72 border-8 border-double border-black transition-all hover:scale-110"
+                className="w-64 border-8 border-double border-black transition-all hover:scale-110"
               />
             </div>
             <div>
               <img
                 src={white}
                 alt="white coffee"
-                className="w-80 border-8 border-double border-black transition-all hover:scale-110"
+                className="w-72 border-8 border-double border-black transition-all hover:scale-110"
               />
             </div>
             <div>
               <img
                 src={cold}
                 alt="cold coffee"
-                className="w-72 border-8 border-double border-black transition-all hover:scale-110"
+                className="w-64 border-8 border-double border-black transition-all hover:scale-110"
               />
             </div>
           </div>

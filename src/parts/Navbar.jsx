@@ -53,9 +53,6 @@ export const Navbar = () => {
             <a href="#coffee-types" className="hover:opacity-70">
               COFFEE
             </a>
-            <a href="#reviews" className="hover:opacity-70">
-              REVIEWS
-            </a>
             <a href="#contact" className="hover:opacity-70">
               CONTACT
             </a>
@@ -66,11 +63,11 @@ export const Navbar = () => {
       {isMenuOpen && <div onClick={closeMenu}></div>}
 
       <div
-        className={`fixed right-0 h-full w-full transform backdrop-blur-sm ${
+        className={`fixed right-0 z-50 h-full w-full transform backdrop-blur-sm ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        <div className="mt-8 flex flex-col items-center gap-8">
+        <div className="mt-8 flex flex-col items-center gap-2">
           <a
             href="#home"
             onClick={closeMenu}
@@ -93,14 +90,6 @@ export const Navbar = () => {
             className="rounded-md border border-black bg-white px-8 py-4 text-4xl font-semibold hover:opacity-70"
           >
             COFFEE
-          </a>
-          <hr className="w-9/12 border border-black" />
-          <a
-            href="#reviews"
-            onClick={closeMenu}
-            className="rounded-md border border-black bg-white px-8 py-4 text-4xl font-semibold hover:opacity-70"
-          >
-            REVIEWS
           </a>
           <hr className="w-9/12 border border-black" />
           <a

@@ -5,8 +5,8 @@ export const Info = () => {
 
   return (
     <section className="flex items-center" id="info">
-      <div className="container">
-        <div className="flex items-center gap-16 lg:flex-col sm:gap-8">
+      <div className="container flex justify-center">
+        <div className="flex items-center justify-center gap-16 lg:max-w-96 lg:flex-col md:gap-8">
           <div className="flex lg:justify-center">
             <img
               src={barista}

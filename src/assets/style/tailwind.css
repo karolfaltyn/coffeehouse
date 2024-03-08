@@ -24,13 +24,3 @@ section {
 .max-ch {
   max-width: 60ch;
 }
-
-.slider .slick-prev:before,
-.slider .slick-next:before {
-  color: black;
-}
-
-.slider {
-  margin: 0 auto;
-  width: 50%;
-}

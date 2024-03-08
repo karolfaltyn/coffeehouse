@@ -27,7 +27,7 @@ export const Hero = () => {
             <br />
           </div>
 
-          <div className="flex lg:justify-center">
+          <div className="flex lg:max-w-96 lg:justify-center">
             <img
               src={hero_img}
               alt="coffee"

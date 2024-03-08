@@ -1,10 +1,10 @@
-import { NavbarShopingCart } from "../parts/NavbarShopingCart";
+import { NavbarShoppingCart } from "../parts/NavbarShoppingCart";
 import { CoffeeMenu } from "../parts/CoffeeMenu";
 
 export const Menu = () => {
   return (
     <>
-      <NavbarShopingCart />
+      <NavbarShoppingCart />
       <main>
         <CoffeeMenu />
       </main>

@@ -25,6 +25,12 @@ section {
   max-width: 60ch;
 }
 
-.hero-img {
-  width: 30rem;
+.slider .slick-prev:before,
+.slider .slick-next:before {
+  color: black;
+}
+
+.slider {
+  margin: 0 auto;
+  width: 50%;
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import "../assets/style/style.css";
 
-export const NavbarShopingCart = () => {
+export const NavbarShoppingCart = () => {
   const coffee_svg = require("../assets/images/svg/bx-coffee.svg").default;
 
   return (

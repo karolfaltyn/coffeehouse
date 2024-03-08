@@ -7,7 +7,10 @@ export const CoffeeTypes = () => {
   const cold = require("../assets/images/on-pages/cold-coffee.jpg");
 
   return (
-    <section className="bg-coffee flex items-center" id="coffee-types">
+    <section
+      className="bg-coffee flex items-center bg-[#F3f3f3] text-[#36322D]"
+      id="coffee-types"
+    >
       <div className="container">
         <div className="flex flex-col items-center justify-center">
           <div className="flex items-center gap-8 md:gap-4">

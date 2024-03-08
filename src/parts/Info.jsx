@@ -4,7 +4,7 @@ export const Info = () => {
   const barista = require("../assets/images/on-pages/barista-collage.png");
 
   return (
-    <section className="flex items-center" id="info">
+    <section className="flex items-center text-[#36322D]" id="info">
       <div className="container flex justify-center">
         <div className="flex items-center justify-center gap-16 lg:max-w-96 lg:flex-col md:gap-8">
           <div className="flex lg:justify-center">

@@ -5,7 +5,10 @@ export const Hero = () => {
   const hero_img = require("../assets/images/on-pages/cappuccino.jpg");
 
   return (
-    <section className="flex items-center" id="home">
+    <section
+      className="flex items-center bg-[#F3f3f3] text-[#36322D]"
+      id="home"
+    >
       <div className="container">
         <div className="flex items-center justify-center gap-16 lg:flex-col lg:gap-8">
           <div className="max-ch">

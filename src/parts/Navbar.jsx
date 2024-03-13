@@ -67,35 +67,35 @@ export const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        <div className="mt-8 flex flex-col items-center gap-2">
+        <div className="mt-8 flex flex-col items-center gap-4">
           <a
             href="#home"
             onClick={closeMenu}
-            className="rounded-md border border-black bg-white px-8 py-4 text-4xl font-semibold hover:opacity-70"
+            className="rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold shadow-lg transition-all hover:scale-110"
           >
             HOME
           </a>
-          <hr className="w-9/12 border border-black" />
+
           <a
             href="#info"
             onClick={closeMenu}
-            className="rounded-md border border-black bg-white px-8 py-4 text-4xl font-semibold hover:opacity-70"
+            className="rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold transition-all hover:scale-110"
           >
             INFO
           </a>
-          <hr className="w-9/12 border border-black" />
+
           <a
             href="#coffee-types"
             onClick={closeMenu}
-            className="rounded-md border border-black bg-white px-8 py-4 text-4xl font-semibold hover:opacity-70"
+            className="rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold transition-all hover:scale-110"
           >
             COFFEE
           </a>
-          <hr className="w-9/12 border border-black" />
+
           <a
             href="#contact"
             onClick={closeMenu}
-            className="rounded-md border border-black bg-white px-8 py-4 text-4xl font-semibold hover:opacity-70"
+            className="rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold transition-all hover:scale-110"
           >
             CONTACT
           </a>

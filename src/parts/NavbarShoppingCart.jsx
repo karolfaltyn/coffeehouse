@@ -6,7 +6,7 @@ export const NavbarShoppingCart = () => {
   const coffee_svg = require("../assets/images/svg/bx-coffee.svg").default;
 
   return (
-    <nav className="fixed inset-x-0 top-0">
+    <nav className="fixed inset-x-0 top-0 font-semibold">
       <div className="container">
         <div className="flex items-center justify-between py-6">
           <div>

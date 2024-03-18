@@ -7,13 +7,24 @@ export const CoffeeMenu = ({
   items,
   onIncreaseQuantity,
   onDecreaseQuantity,
-  isCartOpen
+  isCartOpen,
 }) => {
   const espresso = require("../assets/images/menu/espresso.jpg");
   const cappuccino = require("../assets/images/menu/cappuccino.jpg");
 
   return (
     <section>
+      <div
+        className={`fixed z-50 h-full w-full transform backdrop-blur-sm ${
+          isCartOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out`}
+      >
+        <Cart
+          items={items}
+          onIncreaseQuantity={onIncreaseQuantity}
+          onDecreaseQuantity={onDecreaseQuantity}
+        />
+      </div>
       <div className="mt-16 flex bg-[#F3f3f3] text-[#36322D]" id="coffee-types">
         <div className="container">
           <div className="flex flex-col gap-12">
@@ -48,15 +59,6 @@ export const CoffeeMenu = ({
                 onAddToCart={onAddToCart}
               />
             </div>
-          </div>
-          <div className="">
-            {isCartOpen && (
-              <Cart
-                items={items}
-                onIncreaseQuantity={onIncreaseQuantity}
-                onDecreaseQuantity={onDecreaseQuantity}
-              />
-            )}
           </div>
         </div>
       </div>

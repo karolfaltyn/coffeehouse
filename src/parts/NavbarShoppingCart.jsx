@@ -15,12 +15,7 @@ export const NavbarShoppingCart = ({ toggleCart }) => {
               <img src={coffee_svg} alt="logo" className="sm:hidden" />
             </Link>
           </div>
-          <div className="flex gap-8">
-            <Link to="/" className="hover:opacity-70">
-              HOME
-            </Link>
-            <button onClick={toggleCart}>CART</button>
-          </div>
+          <button onClick={toggleCart}>CART</button>
         </div>
       </div>
       <Outlet />

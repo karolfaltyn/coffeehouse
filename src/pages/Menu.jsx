@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { NavbarShoppingCart } from "../parts/NavbarShoppingCart";
 import { CoffeeMenu } from "../parts/CoffeeMenu";
-import { Cart } from "../components/Cart";
 
 export const Menu = () => {
   const [cartItems, setCartItems] = useState([]);

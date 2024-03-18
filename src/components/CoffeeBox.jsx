@@ -1,6 +1,10 @@
 import "../assets/style/style.css";
 
-export const CoffeeBox = ({ image, name, desc, price }) => {
+export const CoffeeBox = ({ id, image, name, desc, price, onAddToCart }) => {
+  const handleClick = () => {
+    onAddToCart({ id, name, price });
+  };
+
   return (
     <div className="flex w-72 flex-col gap-8 rounded-lg bg-white p-6 shadow-lg">
       <div className="flex self-center">
@@ -13,13 +17,16 @@ export const CoffeeBox = ({ image, name, desc, price }) => {
       <div className="flex flex-col gap-2">
         <div className="">
           <h4 className="text-2xl font-bold">
-            {name} <span className="text-orange-400">{price}</span>
+            {name} <span className="text-orange-400">{price}€</span>
           </h4>
-          <p className="font-semibold underline decoration-wavy hover:opacity-70">
-            Read more
+          <p className="font-semibold underline decoration-wavy">
+            <span className="cursor-pointer hover:opacity-70">Read more</span>
           </p>
         </div>
-        <button className="rounded-md border bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]">
+        <button
+          onClick={handleClick}
+          className="rounded-md border bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]"
+        >
           Add to Cart
         </button>
       </div>

@@ -1,4 +1,5 @@
 import "../assets/style/style.css";
+import { Outlet, Link } from "react-router-dom";
 
 export const PageNotFound = () => {
   return (
@@ -7,7 +8,7 @@ export const PageNotFound = () => {
         <div className="flex flex-col items-center justify-center">
           <h1>404</h1>
           <p>We don't have that coffee yet.</p>
-          <a href="##">Let's go back to the menu.</a>
+          <Link to="/">Let's go back.</Link>
         </div>
       </div>
     </section>

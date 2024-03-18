@@ -1,7 +1,14 @@
 import "../assets/style/style.css";
 import { CoffeeBox } from "../components/CoffeeBox";
+import { Cart } from "../components/Cart";
 
-export const CoffeeMenu = () => {
+export const CoffeeMenu = ({
+  onAddToCart,
+  items,
+  onIncreaseQuantity,
+  onDecreaseQuantity,
+  isCartOpen
+}) => {
   const espresso = require("../assets/images/menu/espresso.jpg");
   const cappuccino = require("../assets/images/menu/cappuccino.jpg");
 
@@ -17,10 +24,12 @@ export const CoffeeMenu = () => {
             </div>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-4">
               <CoffeeBox
+                id={1}
                 image={espresso}
                 name="Espresso"
                 desc="Lorem Ipsum do asdj sdko w wkaop"
-                price="1£"
+                price="1"
+                onAddToCart={onAddToCart}
               />
             </div>
 
@@ -31,12 +40,23 @@ export const CoffeeMenu = () => {
             </div>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-4">
               <CoffeeBox
+                id={2}
                 image={cappuccino}
                 name="Cappuccino"
                 desc="Lorem Ipsum do asdj sdko w wkaop"
-                price="1.5£"
+                price="1.5"
+                onAddToCart={onAddToCart}
               />
             </div>
+          </div>
+          <div className="">
+            {isCartOpen && (
+              <Cart
+                items={items}
+                onIncreaseQuantity={onIncreaseQuantity}
+                onDecreaseQuantity={onDecreaseQuantity}
+              />
+            )}
           </div>
         </div>
       </div>

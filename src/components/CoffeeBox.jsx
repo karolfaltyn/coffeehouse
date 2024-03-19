@@ -17,9 +17,9 @@ export const CoffeeBox = ({ id, image, name, desc, price, onAddToCart }) => {
       <div className="flex flex-col gap-2">
         <div className="">
           <h4 className="text-2xl font-bold">
-            {name} <span className="text-orange-400">{price}€</span>
+            {name} <br /> <span className="text-orange-400">{price}€</span>
           </h4>
-          <p className="font-semibold underline decoration-wavy">
+          <p className="mb-4 font-semibold underline decoration-wavy">
             <span className="cursor-pointer hover:opacity-70">Read more</span>
           </p>
         </div>

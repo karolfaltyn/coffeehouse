@@ -1,4 +1,6 @@
 import "../assets/style/style.css";
+import { useState } from "react";
+import { AlertBox } from "./AlertBox";
 
 export const Cart = ({
   items,
@@ -9,6 +11,12 @@ export const Cart = ({
   const close = require("../assets/images/svg/bx-x.svg").default;
   const plus = require("../assets/images/svg/bx-plus-circle.svg").default;
   const minus = require("../assets/images/svg/bx-minus-circle.svg").default;
+
+  const [showAlert, setShowAlert] = useState(false);
+
+  const toggleAlert = () => {
+    setShowAlert(!showAlert);
+  };
 
   const totalAmount = items.reduce((total, item) => {
     return total + item.price * item.quantity;
@@ -26,11 +34,30 @@ export const Cart = ({
             <img src={close} alt="close" />
           </button>
         </h2>
+        <p className="mb-4 text-center text-2xl font-bold">
+          Order pickup only <br />
+          at the premises!
+        </p>
 
         {items.length === 0 ? (
           <p>Cart is empty, add some products.</p>
         ) : (
           <>
+            <div className="mb-4 flex justify-center gap-4 font-semibold">
+              <form>
+                <input
+                  type="radio"
+                  id="eatin"
+                  name="option"
+                  value="1"
+                  checked
+                />
+                <label for="eatin">Eat in</label>
+                <br />
+                <input type="radio" id="takeout" name="option" value="2" />
+                <label for="takeout">Take out</label>
+              </form>
+            </div>
             <ul>
               <div className="flex flex-col gap-6">
                 {items.map((item, index) => (
@@ -64,9 +91,13 @@ export const Cart = ({
                 Total amount: {totalAmount.toFixed(2)} €
               </div>
             </ul>
-            <button className="sx:mb-16 w-full rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]">
-              Order
+            <button
+              onClick={toggleAlert}
+              className="sx:mb-16 w-full rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]"
+            >
+              Confirm order
             </button>
+            {showAlert && <AlertBox onClose={toggleAlert} />}
           </>
         )}
       </div>

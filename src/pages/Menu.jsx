@@ -48,6 +48,7 @@ export const Menu = () => {
           onIncreaseQuantity={increaseQuantity}
           onDecreaseQuantity={decreaseQuantity}
           isCartOpen={isCartOpen}
+          toggleCart={toggleCart}
         />
       </main>
     </>

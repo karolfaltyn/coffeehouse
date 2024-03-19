@@ -1,6 +1,15 @@
 import "../assets/style/style.css";
 
-export const Cart = ({ items, onIncreaseQuantity, onDecreaseQuantity }) => {
+export const Cart = ({
+  items,
+  onIncreaseQuantity,
+  onDecreaseQuantity,
+  toggleCart,
+}) => {
+  const close = require("../assets/images/svg/bx-x.svg").default;
+  const plus = require("../assets/images/svg/bx-plus-circle.svg").default;
+  const minus = require("../assets/images/svg/bx-minus-circle.svg").default;
+
   const totalAmount = items.reduce((total, item) => {
     return total + item.price * item.quantity;
   }, 0);
@@ -8,39 +17,49 @@ export const Cart = ({ items, onIncreaseQuantity, onDecreaseQuantity }) => {
   return (
     <div className="container flex flex-col items-center">
       <div className="rounded-lg bg-white p-8 shadow-lg">
-        <h2 className="mb-8 text-center text-2xl font-bold">Shopping Cart</h2>
+        <h2 className="mb-8 flex justify-between justify-self-center text-center text-2xl font-bold">
+          <button className="invisible">
+            <img src={close} alt="close" />
+          </button>
+          Shopping Cart{" "}
+          <button onClick={toggleCart}>
+            <img src={close} alt="close" />
+          </button>
+        </h2>
+
         {items.length === 0 ? (
           <p>Cart is empty, add some products.</p>
         ) : (
-          <div>
+          <ul>
             <div className="flex flex-col gap-4">
               {items.map((item, index) => (
                 <li key={index} className="flex items-center justify-between">
                   <div>
-                    {item.name} - {item.price} € - {item.quantity} szt.
+                    <span className="font-medium">{item.name}</span> -{" "}
+                    {item.price} € - {item.quantity} szt.
                   </div>
-                  <div>
+                  <div className="flex justify-self-center">
                     <button
-                      className="mr-2 rounded border px-2 py-1 text-black"
+                      className="mx-4 text-black"
                       onClick={() => onIncreaseQuantity(index)}
                     >
-                      +
+                      <img src={plus} alt="plus" />
                     </button>
                     <button
-                      className="rounded border px-2 py-1 text-black"
+                      className="text-black"
                       onClick={() => onDecreaseQuantity(index)}
                       disabled={item.quantity === 0}
                     >
-                      -
+                      <img src={minus} alt="minus" />
                     </button>
                   </div>
                 </li>
               ))}
             </div>
-            <div className="mt-4 font-bold">
+            <div className="mt-6 text-lg font-semibold">
               Total amount: {totalAmount.toFixed(2)} €
             </div>
-          </div>
+          </ul>
         )}
       </div>
     </div>

@@ -3,6 +3,8 @@ import { Outlet, Link } from "react-router-dom";
 import "../assets/style/style.css";
 
 export const Navbar = () => {
+  const menu = require("../assets/images/svg/bx-menu.svg").default;
+  const close = require("../assets/images/svg/bx-x.svg").default;
   const coffee_svg = require("../assets/images/svg/bx-coffee.svg").default;
 
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -27,20 +29,7 @@ export const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <button onClick={toggleMenu}>
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="black"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
+              <img src={isMenuOpen ? close : menu} alt="hamburger menu" />
             </button>
           </div>
           <div className={`flex gap-8 ${isMenuOpen ? "" : "block"} md:hidden`}>
@@ -60,45 +49,58 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {isMenuOpen && <div onClick={closeMenu}></div>}
-
       <div
-        className={`fixed right-0 z-50 h-full w-full transform backdrop-blur-sm ${
+        className={`fixed z-50 h-full w-full transform backdrop-blur-sm ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        <div className="mt-8 flex flex-col items-center gap-4">
-          <a
-            href="#home"
-            onClick={closeMenu}
-            className="rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold shadow-lg transition-all hover:scale-110"
-          >
-            HOME
-          </a>
+        <div className="container flex flex-col items-center">
+          <div className="rounded-lg bg-white p-8 shadow-lg">
+            <h2 className="mb-8 flex justify-between gap-8 justify-self-center text-center text-2xl font-bold">
+              <button className="invisible">
+                <img src={close} alt="close" />
+              </button>
+              Menu
+              <button onClick={closeMenu}>
+                <img src={close} alt="close" />
+              </button>
+            </h2>
+            <div className="flex flex-col items-center gap-4">
+              <a
+                href="#home"
+                onClick={closeMenu}
+                className="text-xl transition-all hover:scale-110"
+              >
+                HOME
+              </a>
+              <hr className="w-full border-b border-dotted border-slate-900" />
 
-          <a
-            href="#info"
-            onClick={closeMenu}
-            className="rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold transition-all hover:scale-110"
-          >
-            INFO
-          </a>
+              <a
+                href="#info"
+                onClick={closeMenu}
+                className="text-xl transition-all hover:scale-110"
+              >
+                INFO
+              </a>
+              <hr className="w-full border-b border-dotted border-slate-900" />
+              <a
+                href="#coffee-types"
+                onClick={closeMenu}
+                className="text-xl transition-all hover:scale-110"
+              >
+                COFFEE
+              </a>
+              <hr className="w-full border-b border-dotted border-slate-900" />
 
-          <a
-            href="#coffee-types"
-            onClick={closeMenu}
-            className="rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold transition-all hover:scale-110"
-          >
-            COFFEE
-          </a>
-
-          <a
-            href="#contact"
-            onClick={closeMenu}
-            className="rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold transition-all hover:scale-110"
-          >
-            CONTACT
-          </a>
+              <a
+                href="#contact"
+                onClick={closeMenu}
+                className="text-xl transition-all hover:scale-110"
+              >
+                CONTACT
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <Outlet />

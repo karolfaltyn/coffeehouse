@@ -23,7 +23,7 @@ export const CoffeeMenu = ({
   return (
     <section>
       <div
-        className={`fixed z-50 h-full w-full transform backdrop-blur-sm ${
+        className={`fixed z-50 h-full w-full transform overflow-y-auto backdrop-blur-sm ${
           isCartOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >

@@ -30,36 +30,44 @@ export const Cart = ({
         {items.length === 0 ? (
           <p>Cart is empty, add some products.</p>
         ) : (
-          <ul>
-            <div className="flex flex-col gap-4">
-              {items.map((item, index) => (
-                <li key={index} className="flex items-center justify-between">
-                  <div>
-                    <span className="font-medium">{item.name}</span> -{" "}
-                    {item.price} € - {item.quantity} szt.
-                  </div>
-                  <div className="flex justify-self-center">
-                    <button
-                      className="mx-4 text-black"
-                      onClick={() => onIncreaseQuantity(index)}
-                    >
-                      <img src={plus} alt="plus" />
-                    </button>
-                    <button
-                      className="text-black"
-                      onClick={() => onDecreaseQuantity(index)}
-                      disabled={item.quantity === 0}
-                    >
-                      <img src={minus} alt="minus" />
-                    </button>
-                  </div>
-                </li>
-              ))}
-            </div>
-            <div className="mt-6 text-lg font-semibold">
-              Total amount: {totalAmount.toFixed(2)} €
-            </div>
-          </ul>
+          <>
+            <ul>
+              <div className="flex flex-col gap-6">
+                {items.map((item, index) => (
+                  <li
+                    key={index}
+                    className="sx:flex-col sx:gap-2 flex items-center justify-between gap-8"
+                  >
+                    <div>
+                      <span className="font-medium">{item.name}</span> -{" "}
+                      {item.price} € x {item.quantity}
+                    </div>
+                    <div className="flex justify-self-center">
+                      <button
+                        className="mx-4 text-black"
+                        onClick={() => onIncreaseQuantity(index)}
+                      >
+                        <img src={plus} alt="plus" />
+                      </button>
+                      <button
+                        className="text-black"
+                        onClick={() => onDecreaseQuantity(index)}
+                        disabled={item.quantity === 0}
+                      >
+                        <img src={minus} alt="minus" />
+                      </button>
+                    </div>
+                  </li>
+                ))}
+              </div>
+              <div className=" mb-2 mt-6 text-lg font-semibold">
+                Total amount: {totalAmount.toFixed(2)} €
+              </div>
+            </ul>
+            <button className="sx:mb-16 w-full rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]">
+              Order
+            </button>
+          </>
         )}
       </div>
     </div>

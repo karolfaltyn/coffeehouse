@@ -25,7 +25,7 @@ export const CoffeeBox = ({ id, image, name, desc, price, onAddToCart }) => {
         </div>
         <button
           onClick={handleClick}
-          className="rounded-md border bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]"
+          className="rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]"
         >
           Add to Cart
         </button>

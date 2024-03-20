@@ -34,7 +34,7 @@ export const CoffeeMenu = ({
           toggleCart={toggleCart}
         />
       </div>
-      <div className="mt-16 flex bg-[#F3f3f3] text-[#36322D]" id="coffee-types">
+      <div className="mt-16 flex bg-[#F3f3f3]" id="coffee-types">
         <div className="container">
           <div className="mb-16 flex flex-col gap-12">
             <div className="mt-12 flex flex-col items-center gap-8">

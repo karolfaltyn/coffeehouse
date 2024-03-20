@@ -16,11 +16,11 @@ module.exports = {
       md: { max: "767px" },
       // => @media (max-width: 767px) { ... }
 
-      sm: { max: "400px" },
-      // => @media (max-width: 400px) { ... }
-
       sx: { max: "450px" },
       // => @media (max-width: 450px) { ... }
+
+      sm: { max: "400px" },
+      // => @media (max-width: 400px) { ... }
 
       xs: { max: "300px" },
       // => @media (max-width: 300px) { ... }

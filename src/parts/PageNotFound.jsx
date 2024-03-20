@@ -11,6 +11,7 @@ export const PageNotFound = () => {
           <Link to="/">Let's go back.</Link>
         </div>
       </div>
+      <Outlet />
     </section>
   );
 };

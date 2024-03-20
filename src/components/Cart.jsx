@@ -14,9 +14,10 @@ export const Cart = ({
 
   const [showAlert, setShowAlert] = useState(false);
 
-  const toggleAlert = () => {
-    setShowAlert(!showAlert);
-  };
+  const toggleAlert = () => setShowAlert(!showAlert);
+
+  const scrollToTop = () =>
+    document.querySelector("#cart-div").classList.remove("overflow-y-auto");
 
   const totalAmount = items.reduce((total, item) => {
     return total + item.price * item.quantity;
@@ -24,7 +25,7 @@ export const Cart = ({
 
   return (
     <div className="container flex flex-col items-center">
-      <div className="rounded-lg bg-white p-8 shadow-lg">
+      <div className="mb-32 rounded-lg bg-white p-8 shadow-lg">
         <h2 className="mb-8 flex justify-between justify-self-center text-center text-2xl font-bold">
           <button className="invisible">
             <img src={close} alt="close" />
@@ -63,13 +64,13 @@ export const Cart = ({
                 {items.map((item, index) => (
                   <li
                     key={index}
-                    className="sx:flex-col sx:gap-2 flex items-center justify-between gap-8"
+                    className="flex justify-between gap-8 sx:flex-col sx:gap-2"
                   >
                     <div>
                       <span className="font-medium">{item.name}</span> -{" "}
                       {item.price} € x {item.quantity}
                     </div>
-                    <div className="flex justify-self-center">
+                    <div className="flex self-center justify-self-center">
                       <button
                         className="mx-4 text-black"
                         onClick={() => onIncreaseQuantity(index)}
@@ -92,8 +93,11 @@ export const Cart = ({
               </div>
             </ul>
             <button
-              onClick={toggleAlert}
-              className="sx:mb-16 w-full rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]"
+              onClick={() => {
+                toggleAlert();
+                scrollToTop();
+              }}
+              className="w-full rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]"
             >
               Confirm order
             </button>

@@ -37,8 +37,7 @@ export const Cart = ({
           </button>
         </h2>
         <p className="mb-4 text-center text-2xl font-bold">
-          Order pickup only <br />
-          at the premises!
+          IN STORE PICKUP ONLY!
         </p>
 
         {items.length === 0 ? (

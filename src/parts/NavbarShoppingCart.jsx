@@ -2,9 +2,10 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import "../assets/style/style.css";
 
-export const NavbarShoppingCart = ({ toggleCart }) => {
+export const NavbarShoppingCart = ({ toggleCart, isCartOpen }) => {
   const coffee_svg = require("../assets/images/svg/bx-coffee.svg").default;
-  const cart_svg = require("../assets/images/svg/bx-cart.svg").default;
+  const cart = require("../assets/images/svg/bx-cart.svg").default;
+  const close = require("../assets/images/svg/bx-x.svg").default;
 
   return (
     <nav className="fixed inset-x-0 top-0 bg-[#F3f3f3] font-semibold">
@@ -17,7 +18,7 @@ export const NavbarShoppingCart = ({ toggleCart }) => {
             </Link>
           </div>
           <button onClick={toggleCart}>
-            <img src={cart_svg} alt="shopping cart" />
+            <img src={isCartOpen ? close : cart} alt="shopping cart" />
           </button>
         </div>
       </div>

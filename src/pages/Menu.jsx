@@ -9,12 +9,13 @@ export const Menu = () => {
     return storedCartItems ? JSON.parse(storedCartItems) : [];
   });
 
-  const [isCartOpen, setIsCartOpen] = useState(false);
-
   // Save cart items to sessionStorage whenever it changes
   useEffect(() => {
     sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
+
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const toggleCart = () => setIsCartOpen(!isCartOpen);
 
   const addToCart = (product) => {
     const existingIndex = cartItems.findIndex((item) => item.id === product.id);
@@ -44,10 +45,6 @@ export const Menu = () => {
     setCartItems(updatedCartItems);
   };
 
-  const toggleCart = () => {
-    setIsCartOpen(!isCartOpen);
-  };
-
   const clearCartItems = () => {
     sessionStorage.removeItem("cartItems");
     setCartItems([]); // Clearing cartItems state as well
@@ -55,7 +52,7 @@ export const Menu = () => {
 
   return (
     <>
-      <NavbarShoppingCart toggleCart={toggleCart} />
+      <NavbarShoppingCart toggleCart={toggleCart} isCartOpen={isCartOpen} />
       <main>
         <CoffeeMenu
           onAddToCart={addToCart}

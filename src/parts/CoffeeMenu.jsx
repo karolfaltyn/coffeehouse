@@ -9,6 +9,7 @@ export const CoffeeMenu = ({
   onDecreaseQuantity,
   isCartOpen,
   toggleCart,
+  clearCartItems,
 }) => {
   const espresso = require("../assets/images/menu/espresso.jpg");
   const americano = require("../assets/images/menu/americano.jpg");
@@ -33,6 +34,7 @@ export const CoffeeMenu = ({
           onIncreaseQuantity={onIncreaseQuantity}
           onDecreaseQuantity={onDecreaseQuantity}
           toggleCart={toggleCart}
+          clearCartItems={clearCartItems}
         />
       </div>
       <div className="mt-16 flex bg-[#F3f3f3]" id="coffee-types">

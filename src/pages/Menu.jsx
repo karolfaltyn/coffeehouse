@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavbarShoppingCart } from "../parts/NavbarShoppingCart";
 import { CoffeeMenu } from "../parts/CoffeeMenu";
 
 export const Menu = () => {
-  const [cartItems, setCartItems] = useState([]);
+  // Load cart items from sessionStorage on component mount
+  const [cartItems, setCartItems] = useState(() => {
+    const storedCartItems = sessionStorage.getItem("cartItems");
+    return storedCartItems ? JSON.parse(storedCartItems) : [];
+  });
+
   const [isCartOpen, setIsCartOpen] = useState(false);
+
+  // Save cart items to sessionStorage whenever it changes
+  useEffect(() => {
+    sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addToCart = (product) => {
     const existingIndex = cartItems.findIndex((item) => item.id === product.id);
@@ -38,6 +48,11 @@ export const Menu = () => {
     setIsCartOpen(!isCartOpen);
   };
 
+  const clearCartItems = () => {
+    sessionStorage.removeItem("cartItems");
+    setCartItems([]); // Clearing cartItems state as well
+  };
+
   return (
     <>
       <NavbarShoppingCart toggleCart={toggleCart} />
@@ -49,6 +64,7 @@ export const Menu = () => {
           onDecreaseQuantity={decreaseQuantity}
           isCartOpen={isCartOpen}
           toggleCart={toggleCart}
+          clearCartItems={clearCartItems}
         />
       </main>
     </>

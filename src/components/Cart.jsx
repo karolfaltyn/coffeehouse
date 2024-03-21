@@ -7,6 +7,7 @@ export const Cart = ({
   onIncreaseQuantity,
   onDecreaseQuantity,
   toggleCart,
+  clearCartItems,
 }) => {
   const close = require("../assets/images/svg/bx-x.svg").default;
   const plus = require("../assets/images/svg/bx-plus-circle.svg").default;
@@ -51,12 +52,12 @@ export const Cart = ({
                   id="eatin"
                   name="option"
                   value="1"
-                  checked
+                  defaultChecked
                 />
-                <label for="eatin">Eat in</label>
+                <label htmlFor="eatin">Eat in</label>
                 <br />
                 <input type="radio" id="takeout" name="option" value="2" />
-                <label for="takeout">Take out</label>
+                <label htmlFor="takeout">Take out</label>
               </form>
             </div>
             <ul>
@@ -101,7 +102,9 @@ export const Cart = ({
             >
               Confirm order
             </button>
-            {showAlert && <AlertBox onClose={toggleAlert} />}
+            {showAlert && (
+              <AlertBox onClose={toggleAlert} clearCartItems={clearCartItems} />
+            )}
           </>
         )}
       </div>

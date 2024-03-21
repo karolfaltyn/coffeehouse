@@ -17,6 +17,16 @@ export const Navbar = () => {
     setMenuOpen(false);
   };
 
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+
   return (
     <nav className="fixed inset-x-0 top-0 font-semibold">
       <div className="container">

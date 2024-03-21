@@ -13,6 +13,7 @@
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 section {

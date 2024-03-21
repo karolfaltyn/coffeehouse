@@ -7,7 +7,7 @@ export const NavbarShoppingCart = ({ toggleCart, isCartOpen }) => {
   const cart = require("../assets/images/svg/bx-cart.svg").default;
 
   return (
-    <nav className="fixed inset-x-0 top-0 bg-[#F3f3f3] font-semibold">
+    <nav className="fixed inset-x-0 top-0 z-50 bg-[#F3f3f3] font-semibold">
       <div className="container">
         <div className="flex items-center justify-between py-6">
           <div>

@@ -13,7 +13,7 @@ export const CoffeeMenu = ({
 }) => {
   const espresso = require("../assets/images/menu/espresso.jpg");
   const americano = require("../assets/images/menu/americano.jpg");
-  const doppio = require("../assets/images/menu/doppio.jpg");
+  const lungo = require("../assets/images/menu/lungo.jpg");
   const cappuccino = require("../assets/images/menu/cappuccino.jpg");
   const coffee_latte = require("../assets/images/menu/coffee-latte.jpg");
   const latte_macchiato = require("../assets/images/menu/latte-macchiato.jpg");
@@ -50,7 +50,7 @@ export const CoffeeMenu = ({
                 id={1}
                 image={espresso}
                 name="Espresso"
-                desc="Lorem Ipsum do asdj sdko w wkaop"
+                desc="The foundation of other coffees. This beverage is served as a small, strong shot of caffeine."
                 price="1.20"
                 onAddToCart={onAddToCart}
               />
@@ -58,15 +58,15 @@ export const CoffeeMenu = ({
                 id={2}
                 image={americano}
                 name="Americano"
-                desc="Lorem Ipsum do asdj sdko w wkaop"
+                desc="Technically a “black coffee”, the americano is a shot of espresso made up with hot water. "
                 price="2.20"
                 onAddToCart={onAddToCart}
               />
               <CoffeeBox
                 id={3}
-                image={doppio}
-                name="Doppio"
-                desc="Lorem Ipsum do asdj sdko w wkaop"
+                image={lungo}
+                name="Lungo"
+                desc="A lungo is an espresso coffee, but with a higher volume than a standard espresso."
                 price="1.50"
                 onAddToCart={onAddToCart}
               />
@@ -82,7 +82,7 @@ export const CoffeeMenu = ({
                 id={4}
                 image={cappuccino}
                 name="Cappuccino"
-                desc="Lorem Ipsum do asdj sdko w wkaop"
+                desc="The cappuccino is one part espresso, one part milk, and one part foam."
                 price="2.20"
                 onAddToCart={onAddToCart}
               />
@@ -90,7 +90,7 @@ export const CoffeeMenu = ({
                 id={5}
                 image={coffee_latte}
                 name="Coffee Latte"
-                desc="Lorem Ipsum do asdj sdko w wkaop"
+                desc="The latte is comprised of a shot of espresso and steamed milk with just a touch of foam."
                 price="2.50"
                 onAddToCart={onAddToCart}
               />
@@ -98,7 +98,7 @@ export const CoffeeMenu = ({
                 id={6}
                 image={latte_macchiato}
                 name="Latte Macchiato"
-                desc="Lorem Ipsum do asdj sdko w wkaop"
+                desc="Layered coffee prepared with a small portion of espresso, milk and milk froth."
                 price="2.30"
                 onAddToCart={onAddToCart}
               />
@@ -114,7 +114,7 @@ export const CoffeeMenu = ({
                 id={7}
                 image={cold_brew}
                 name="Cold Brew"
-                desc="Lorem Ipsum do asdj sdko w wkaop"
+                desc="Coffee prepared by steeping ground beans in cold water for an extended period, usually 12-24 hours."
                 price="2.50"
                 onAddToCart={onAddToCart}
               />
@@ -122,7 +122,7 @@ export const CoffeeMenu = ({
                 id={8}
                 image={ice_latte}
                 name="Ice Latte"
-                desc="Lorem Ipsum do asdj sdko w wkaop"
+                desc="One shot of espresso and plenty of cold milk, optional sweet syrup."
                 price="2.50"
                 onAddToCart={onAddToCart}
               />
@@ -130,7 +130,7 @@ export const CoffeeMenu = ({
                 id={9}
                 image={coffee_frappe}
                 name="Coffee Frappe"
-                desc="Lorem Ipsum do asdj sdko w wkaop"
+                desc="Made of water, espresso, sugar, milk, ice and is shaken, blended or beaten to combine the ingredients."
                 price="2.50"
                 onAddToCart={onAddToCart}
               />

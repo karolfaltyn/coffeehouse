@@ -12,7 +12,7 @@ export const CoffeeBox = ({ id, image, name, desc, price, onAddToCart }) => {
   return (
     <div className="relative flex w-72 flex-col gap-8 rounded-lg bg-white p-6 shadow-lg">
       <div
-        className={`sxs:hidden absolute transform backdrop-blur-sm ${
+        className={`sxs:hidden absolute transform backdrop-blur-md ${
           isMoreInfoOpen ? "opacity-100" : "opacity-0"
         } transition-all ease-in-out`}
       >

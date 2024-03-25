@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "../assets/style/style.css";
 
 export const Navbar = () => {
@@ -17,25 +17,17 @@ export const Navbar = () => {
     setMenuOpen(false);
   };
 
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-      });
-    });
-  });
-
   return (
     <nav className="fixed inset-x-0 top-0 font-semibold">
       <div className="container">
         <div className="flex items-center justify-between py-6">
           <div>
-            <Link to="/" className="flex gap-2 hover:opacity-70">
-              COFFEEHOUSE
-              <img src={coffee_svg} alt="logo" className="sm:hidden" />
-            </Link>
+            <HashLink smooth to="#home">
+              <a href="#home" className="flex gap-2 hover:opacity-70">
+                COFFEEHOUSE
+                <img src={coffee_svg} alt="logo" className="sm:hidden" />
+              </a>
+            </HashLink>
           </div>
           <div className="hidden md:block">
             <button onClick={toggleMenu}>
@@ -43,18 +35,27 @@ export const Navbar = () => {
             </button>
           </div>
           <div className={`flex gap-8 ${isMenuOpen ? "" : "block"} md:hidden`}>
-            <a href="#home" className="hover:opacity-70">
-              HOME
-            </a>
-            <a href="#info" className="hover:opacity-70">
-              INFO
-            </a>
-            <a href="#coffee-types" className="hover:opacity-70">
-              COFFEE
-            </a>
-            <a href="#contact" className="hover:opacity-70">
-              CONTACT
-            </a>
+            <HashLink smooth to="#home">
+              <a href="#home" className="hover:opacity-70">
+                HOME
+              </a>
+            </HashLink>
+            <HashLink smooth to="#info">
+              <a href="#info" className="hover:opacity-70">
+                INFO
+              </a>
+            </HashLink>
+            <HashLink smooth to="#coffee-types">
+              <a href="#coffee-types" className="hover:opacity-70">
+                COFFEE
+              </a>
+            </HashLink>
+
+            <HashLink smooth to="#contact">
+              <a href="#contact" className="hover:opacity-70">
+                CONTACT
+              </a>
+            </HashLink>
           </div>
         </div>
       </div>
@@ -76,44 +77,49 @@ export const Navbar = () => {
               </button>
             </h2>
             <div className="flex flex-col items-center gap-4">
-              <a
-                href="#home"
-                onClick={closeMenu}
-                className="text-xl transition-all hover:scale-110"
-              >
-                HOME
-              </a>
+              <HashLink smooth to="#home">
+                <a
+                  href="#home"
+                  onClick={closeMenu}
+                  className="text-xl transition-all hover:scale-110"
+                >
+                  HOME
+                </a>
+              </HashLink>
               <hr className="w-full border-b border-dotted border-slate-900" />
-
-              <a
-                href="#info"
-                onClick={closeMenu}
-                className="text-xl transition-all hover:scale-110"
-              >
-                INFO
-              </a>
+              <HashLink smooth to="#info">
+                <a
+                  href="#info"
+                  onClick={closeMenu}
+                  className="text-xl transition-all hover:scale-110"
+                >
+                  INFO
+                </a>
+              </HashLink>
               <hr className="w-full border-b border-dotted border-slate-900" />
-              <a
-                href="#coffee-types"
-                onClick={closeMenu}
-                className="text-xl transition-all hover:scale-110"
-              >
-                COFFEE
-              </a>
+              <HashLink smooth to="#coffee-types">
+                <a
+                  href="#coffee-types"
+                  onClick={closeMenu}
+                  className="text-xl transition-all hover:scale-110"
+                >
+                  COFFEE
+                </a>
+              </HashLink>
               <hr className="w-full border-b border-dotted border-slate-900" />
-
-              <a
-                href="#contact"
-                onClick={closeMenu}
-                className="text-xl transition-all hover:scale-110"
-              >
-                CONTACT
-              </a>
+              <HashLink smooth to="#contact">
+                <a
+                  href="#contact"
+                  onClick={closeMenu}
+                  className="text-xl transition-all hover:scale-110"
+                >
+                  CONTACT
+                </a>
+              </HashLink>
             </div>
           </div>
         </div>
       </div>
-      <Outlet />
     </nav>
   );
 };

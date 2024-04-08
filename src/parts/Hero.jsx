@@ -14,7 +14,7 @@ export const Hero = () => {
           <div className="max-ch">
             <header>
               <h1 className="mb-4 text-4xl font-bold">ENJOY THE MOMENT</h1>
-              <a href="##" className="text-3xl font-semibold text-orange-400">
+              <a href="##" className="text-3xl font-semibold text-orange-500">
                 @thecoffeehouse
               </a>
             </header>

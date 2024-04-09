@@ -2,7 +2,7 @@ import "../assets/style/style.css";
 import { Outlet, Link } from "react-router-dom";
 
 export const PageNotFound = () => {
-  const hero_img = require("../assets/images/on-pages/coffee-sketch.png");
+  const hero_img = require("../assets/images/on-pages/coffee-sketch.webp");
 
   return (
     <section className="flex items-center">

@@ -2,9 +2,9 @@ import { Outlet, Link } from "react-router-dom";
 import "../assets/style/style.css";
 
 export const CoffeeTypes = () => {
-  const black = require("../assets/images/on-pages/black-coffee.jpg");
-  const white = require("../assets/images/on-pages/white-coffee.jpg");
-  const cold = require("../assets/images/on-pages/cold-coffee.jpg");
+  const black = require("../assets/images/on-pages/black-coffee.webp");
+  const white = require("../assets/images/on-pages/white-coffee.webp");
+  const cold = require("../assets/images/on-pages/cold-coffee.webp");
 
   return (
     <section

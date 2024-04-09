@@ -1,7 +1,7 @@
 import "../assets/style/style.css";
 
 export const Info = () => {
-  const barista = require("../assets/images/on-pages/barista-collage.png");
+  const barista = require("../assets/images/on-pages/barista-collage.webp");
 
   return (
     <section className="flex items-center" id="info">

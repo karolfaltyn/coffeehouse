@@ -11,15 +11,15 @@ export const CoffeeMenu = ({
   toggleCart,
   clearCartItems,
 }) => {
-  const espresso = require("../assets/images/menu/espresso.jpg");
-  const americano = require("../assets/images/menu/americano.jpg");
-  const lungo = require("../assets/images/menu/lungo.jpg");
-  const cappuccino = require("../assets/images/menu/cappuccino.jpg");
-  const coffee_latte = require("../assets/images/menu/coffee-latte.jpg");
-  const latte_macchiato = require("../assets/images/menu/latte-macchiato.jpg");
-  const cold_brew = require("../assets/images/menu/cold-brew.jpg");
-  const ice_latte = require("../assets/images/menu/ice-latte.jpg");
-  const coffee_frappe = require("../assets/images/menu/coffee-frappe.jpg");
+  const espresso = require("../assets/images/menu/espresso.webp");
+  const americano = require("../assets/images/menu/americano.webp");
+  const lungo = require("../assets/images/menu/lungo.webp");
+  const cappuccino = require("../assets/images/menu/cappuccino.webp");
+  const coffee_latte = require("../assets/images/menu/coffee-latte.webp");
+  const latte_macchiato = require("../assets/images/menu/latte-macchiato.webp");
+  const cold_brew = require("../assets/images/menu/cold-brew.webp");
+  const ice_latte = require("../assets/images/menu/ice-latte.webp");
+  const coffee_frappe = require("../assets/images/menu/coffee-frappe.webp");
 
   return (
     <section>

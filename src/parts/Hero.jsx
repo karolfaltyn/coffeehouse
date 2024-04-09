@@ -2,13 +2,13 @@ import { Outlet, Link } from "react-router-dom";
 import "../assets/style/style.css";
 
 export const Hero = () => {
-  const hero_img = require("../assets/images/on-pages/coffee-sketch.png");
-  const b = require("../assets/images/on-pages/2.png");
-  const c = require("../assets/images/on-pages/3.png");
-  const a = require("../assets/images/on-pages/1.png");
+  const hero_img = require("../assets/images/on-pages/coffee-sketch.webp");
+  const b = require("../assets/images/on-pages/2.webp");
+  const c = require("../assets/images/on-pages/3.webp");
+  const a = require("../assets/images/on-pages/1.webp");
 
   return (
-    <section className="flex items-center bg-[#F3f3f3]" id="home">
+    <section className="flex items-center bg-[#fdfaf5]" id="home">
       <div className="container">
         <div className="flex items-center justify-center lg:flex-col lg:gap-8 sm:gap-0">
           <div className="max-ch">

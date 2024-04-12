@@ -56,6 +56,7 @@ Coffeehouse is a web application designed to provide users with an enjoyable sho
 -   Tailwind
 -   JavaScript
 -   React
+-   PostCSS
 
 ## License
 

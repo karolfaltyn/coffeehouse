@@ -15,7 +15,8 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "win-node-env": "^0.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,6 +25,7 @@
     "eject": "react-scripts eject",
     "watch:tailwind": "postcss -w ./src/assets/style/tailwind.css -o ./src/assets/style/style.css --watch",
     "build:tailwind": "postcss ./src/assets/style/tailwind.css -o ./src/assets/style/style.css",
+    "prod": "NODE_ENV=production postcss ./src/assets/style/tailwind.css -o ./src/assets/style/style.css",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

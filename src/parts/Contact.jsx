@@ -12,7 +12,7 @@ export const Contact = () => {
         <div className="container">
           <div className="flex flex-col items-center justify-center gap-8">
             <div className="max-ch rounded-full border bg-white p-32">
-              <h3 className="mb-4 text-3xl font-semibold text-center">Contact Us</h3>
+              <h3 className="mb-4 text-3xl font-semibold text-center font-caveat">Contact Us</h3>
               <div className="mb-4 flex gap-8">
                 <ol className="flex flex-col gap-4 items-center">
                   <li className="flex gap-2">

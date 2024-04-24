@@ -41,7 +41,7 @@ export const CoffeeMenu = ({
         <div className="container">
           <div className="mb-16 flex flex-col gap-12">
             <div className="mt-12 flex flex-col items-center gap-8">
-              <h3 className="text-5xl font-semibold md:text-3xl xs:text-2xl">
+              <h3 className="font-caveat text-5xl font-black font-semibold md:text-3xl xs:text-2xl">
                 Black Coffee
               </h3>
             </div>
@@ -73,7 +73,7 @@ export const CoffeeMenu = ({
             </div>
 
             <div className="mt-12 flex flex-col items-center gap-8">
-              <h3 className="text-5xl font-semibold md:text-3xl xs:text-2xl">
+              <h3 className="font-caveat text-5xl font-black font-semibold md:text-3xl xs:text-2xl">
                 White Coffee
               </h3>
             </div>
@@ -105,7 +105,7 @@ export const CoffeeMenu = ({
             </div>
 
             <div className="mt-12 flex flex-col items-center gap-8">
-              <h3 className="text-5xl font-semibold md:text-3xl xs:text-2xl">
+              <h3 className="font-caveat text-5xl font-black font-semibold md:text-3xl xs:text-2xl">
                 Cold Coffee
               </h3>
             </div>

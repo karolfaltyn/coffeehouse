@@ -12,14 +12,14 @@ export const NavbarShoppingCart = ({ toggleCart, isCartOpen }) => {
         <div className="flex items-center justify-between py-6">
           <div>
             {isCartOpen ? (
-              <span className="flex gap-2 font-semibold">
+              <span className="font-caveat flex gap-2 font-black">
                 COFFEEHOUSE
                 <img src={coffee_svg} alt="logo" className="sm:hidden" />
               </span>
             ) : (
               <Link
                 to="/"
-                className="flex gap-2 font-semibold hover:opacity-70"
+                className="font-caveat flex gap-2 font-black hover:opacity-70"
               >
                 COFFEEHOUSE
                 <img src={coffee_svg} alt="logo" className="sm:hidden" />

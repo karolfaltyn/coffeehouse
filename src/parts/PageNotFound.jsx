@@ -13,8 +13,10 @@ export const PageNotFound = () => {
             alt="coffee"
             className="transition-all hover:scale-110"
           />
-          <h1 className="text-5xl font-semibold">404</h1>
-          <p className="text-2xl font-medium">We don't have that coffee yet.</p>
+          <h1 className="font-caveat text-5xl font-black">404</h1>
+          <p className="font-caveat text-3xl font-black">
+            We don't have that coffee yet.
+          </p>
           <Link
             to="/"
             className="font-medium text-orange-400 underline decoration-wavy hover:opacity-70"

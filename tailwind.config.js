@@ -28,6 +28,9 @@ module.exports = {
       xs: { max: "300px" },
       // => @media (max-width: 300px) { ... }
     },
+    fontFamily: {
+      caveat: ['"Caveat"', 'cursive'],
+    },
   },
   plugins: [],
 };

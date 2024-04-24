@@ -23,7 +23,10 @@ export const Navbar = () => {
         <div className="flex items-center justify-between py-6">
           <div>
             <HashLink smooth to="#home">
-              <a href="#home" className="flex gap-2 hover:opacity-70">
+              <a
+                href="#home"
+                className="font-caveat flex gap-2 font-black hover:opacity-70"
+              >
                 COFFEEHOUSE
                 <img src={coffee_svg} alt="logo" className="sm:hidden" />
               </a>
@@ -36,23 +39,35 @@ export const Navbar = () => {
           </div>
           <div className={`flex gap-8 ${isMenuOpen ? "" : "block"} md:hidden`}>
             <HashLink smooth to="#home">
-              <a href="#home" className="hover:opacity-70">
+              <a
+                href="#home"
+                className="font-caveat font-black hover:opacity-70"
+              >
                 HOME
               </a>
             </HashLink>
             <HashLink smooth to="#info">
-              <a href="#info" className="hover:opacity-70">
+              <a
+                href="#info"
+                className="font-caveat font-black hover:opacity-70"
+              >
                 INFO
               </a>
             </HashLink>
             <HashLink smooth to="#coffee-types">
-              <a href="#coffee-types" className="hover:opacity-70">
+              <a
+                href="#coffee-types"
+                className="font-caveat font-black hover:opacity-70"
+              >
                 COFFEE
               </a>
             </HashLink>
 
             <HashLink smooth to="#contact">
-              <a href="#contact" className="hover:opacity-70">
+              <a
+                href="#contact"
+                className="font-caveat font-black hover:opacity-70"
+              >
                 CONTACT
               </a>
             </HashLink>
@@ -68,10 +83,10 @@ export const Navbar = () => {
         <div className="container flex flex-col items-center">
           <div className="rounded-lg bg-white p-8 shadow-lg">
             <h2 className="mb-8 flex justify-between gap-8 justify-self-center text-center text-2xl font-bold">
-              <button className="invisible">
+              <button className="invisible ">
                 <img src={close} alt="close" />
               </button>
-              Menu
+              <p className="font-caveat text-4xl font-bold">Menu</p>
               <button onClick={closeMenu}>
                 <img src={close} alt="close" />
               </button>
@@ -81,37 +96,37 @@ export const Navbar = () => {
                 <a
                   href="#home"
                   onClick={closeMenu}
-                  className="text-xl transition-all hover:scale-110"
+                  className="font-caveat text-xl transition-all hover:scale-110"
                 >
                   HOME
                 </a>
               </HashLink>
-              <hr className="w-full border-b border-dotted border-slate-900" />
+              <hr className="w-full border-b border-dashed border-gray-400" />
               <HashLink smooth to="#info">
                 <a
                   href="#info"
                   onClick={closeMenu}
-                  className="text-xl transition-all hover:scale-110"
+                  className="font-caveat text-xl transition-all hover:scale-110"
                 >
                   INFO
                 </a>
               </HashLink>
-              <hr className="w-full border-b border-dotted border-slate-900" />
+              <hr className="w-full border-b border-dashed border-gray-400" />
               <HashLink smooth to="#coffee-types">
                 <a
                   href="#coffee-types"
                   onClick={closeMenu}
-                  className="text-xl transition-all hover:scale-110"
+                  className="font-caveat text-xl transition-all hover:scale-110"
                 >
                   COFFEE
                 </a>
               </HashLink>
-              <hr className="w-full border-b border-dotted border-slate-900" />
+              <hr className="w-full border-b border-dashed border-gray-400" />
               <HashLink smooth to="#contact">
                 <a
                   href="#contact"
                   onClick={closeMenu}
-                  className="text-xl transition-all hover:scale-110"
+                  className="font-caveat text-xl transition-all hover:scale-110"
                 >
                   CONTACT
                 </a>

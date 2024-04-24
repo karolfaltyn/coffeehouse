@@ -16,10 +16,10 @@ export const Info = () => {
           </div>
 
           <div className="max-ch">
-            <h3 className="mb-4 text-3xl font-semibold">
+            <h3 className="font-caveat mb-4 text-3xl font-medium">
               What's Make Our Coffee Special!
             </h3>
-            <p className="mb-4">
+            <p className="mb-4 font-thin">
               Our coffee is prepared by professional baristas with many years of
               experience. You can always count on coffee prepared from fresh,
               highest quality beans. We are also aware of plastic pollution so
@@ -28,7 +28,7 @@ export const Info = () => {
             </p>
             <a
               href="##"
-              className="font-semibold underline decoration-wavy hover:opacity-70"
+              className="font-medium text-orange-500 underline decoration-wavy hover:opacity-70"
             >
               Read More
             </a>

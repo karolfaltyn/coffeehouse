@@ -13,18 +13,20 @@ export const Hero = () => {
         <div className="flex items-center justify-center lg:flex-col lg:gap-8 sm:gap-0">
           <div className="max-ch">
             <header>
-              <h1 className="mb-4 text-4xl font-bold">ENJOY THE MOMENT</h1>
-              <a href="##" className="text-3xl font-semibold text-orange-500">
+              <h1 className="font-caveat mb-4 text-5xl font-bold">
+                ENJOY THE MOMENT
+              </h1>
+              <a href="##" className="text-3xl font-medium text-orange-500">
                 @thecoffeehouse
               </a>
             </header>
-            <p className="mt-2 text-2xl">
+            <p className="mt-2 text-2xl font-light">
               The best coffee bean for every cup of your coffee.
             </p>
             <br />
             <Link
               to="/menu"
-              className="rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]"
+              className="font-caveat rounded-md border-2 border-dashed border-gray-400 px-4 py-2 text-xl font-medium text-black transition-all hover:bg-[#F3f3f3]"
             >
               MENU
             </Link>
@@ -46,7 +48,7 @@ export const Hero = () => {
         </div>
         <br className="sm:hidden" />
         <br className="sm:hidden" />
-        <hr className="border-t border-slate-500 sm:hidden" />
+        <hr className="border-b border-dashed border-gray-400 sm:hidden" />
       </div>
       <Outlet />
     </section>

@@ -31,32 +31,39 @@ export const Cart = ({
           <button className="invisible">
             <img src={close} alt="close" />
           </button>
-          Shopping Cart{" "}
+          <p className="font-caveat text-3xl font-bold">Shopping Cart</p>
           <button onClick={toggleCart}>
             <img src={close} alt="close" />
           </button>
         </h2>
-        <p className="mb-4 text-center text-2xl font-bold">
+        <p className="mb-4 text-center text-2xl font-medium">
           IN STORE PICKUP ONLY!
         </p>
 
         {items.length === 0 ? (
-          <p>Cart is empty, add some products.</p>
+          <p className="flex justify-center">
+            Cart is empty, add some products.
+          </p>
         ) : (
           <>
             <div className="mb-4 flex justify-center gap-4 font-semibold">
-              <form>
-                <input
-                  type="radio"
-                  id="eatin"
-                  name="option"
-                  value="1"
-                  defaultChecked
-                />
-                <label htmlFor="eatin">Eat in</label>
-                <br />
-                <input type="radio" id="takeout" name="option" value="2" />
-                <label htmlFor="takeout">Take out</label>
+              <form className="flex gap-4">
+                <div className="flex gap-1">
+                  <input
+                    type="radio"
+                    id="eatin"
+                    name="option"
+                    value="1"
+                    defaultChecked
+                  />
+                  <label htmlFor="eatin">Eat in</label>
+                  <br />
+                </div>
+
+                <div className="flex gap-1">
+                  <input type="radio" id="takeout" name="option" value="2" />
+                  <label htmlFor="takeout">Take out</label>
+                </div>
               </form>
             </div>
             <ul>
@@ -97,7 +104,7 @@ export const Cart = ({
                 toggleAlert();
                 scrollToTop();
               }}
-              className="w-full rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]"
+              className="font-caveat w-full rounded-md border-2 border-dashed border-gray-400 px-4 py-2 text-3xl font-medium text-black transition-all hover:bg-[#F3f3f3]"
             >
               Confirm order
             </button>

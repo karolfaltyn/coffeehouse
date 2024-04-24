@@ -37,12 +37,12 @@ export const CoffeeTypes = () => {
             </div>
           </div>
           <div className="mt-12 flex flex-col items-center gap-8">
-            <h3 className="text-5xl md:text-3xl xs:text-2xl">
+            <h3 className="font-caveat text-5xl md:text-3xl xs:text-2xl">
               Which type are you?
             </h3>
             <Link
               to="/menu"
-              className="rounded-md border border-black bg-white px-4 py-2 text-xl font-semibold text-black transition-all hover:bg-[#F3f3f3]"
+              className="font-caveat rounded-md border-2 border-dashed border-gray-400 px-4 py-2 text-xl font-medium text-black transition-all hover:bg-[#fff]"
             >
               MENU
             </Link>

@@ -16,7 +16,11 @@ Coffeehouse is a web application designed to provide users with an enjoyable sho
   
 - **Session Storage**: Cart data is securely stored in session storage, allowing users to maintain their selections even when navigating between pages or refreshing the browser.
 
-## Installation
+## Getting Started 
+
+To view the website online, visit [https://karolfaltyn.github.io/coffeehouse/](https://karolfaltyn.github.io/coffeehouse/).
+
+### Installation
 
 1. Clone the repository:
 

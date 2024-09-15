@@ -1,4 +1,3 @@
-
 # Coffeehouse
 
 
@@ -21,6 +20,8 @@ Coffeehouse is a web application designed to provide users with an enjoyable sho
 To view the website online, visit [https://karolfaltyn.github.io/coffeehouse/](https://karolfaltyn.github.io/coffeehouse/).
 
 ### Installation
+
+Follow these steps to set up the Coffeehouse on your local machine:
 
 1. Clone the repository:
 
@@ -56,10 +57,15 @@ To view the website online, visit [https://karolfaltyn.github.io/coffeehouse/](h
 
 ## Technologies Used
 
--   React
--   JavaScript
--   Tailwind CSS
--   PostCSS
+-   **React**: For building dynamic and interactive user interfaces.
+
+-   **JavaScript**: Core language for client-side functionality and logic.
+
+-   **Tailwind CSS**: Utility-first CSS framework for creating custom, responsive designs.
+
+-   **PostCSS**: CSS processor for enhanced styling and optimization.
+
+-   **Session Storage**: For managing data storage during a single browser session.
 
 ## License
 

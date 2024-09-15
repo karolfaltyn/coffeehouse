@@ -4,7 +4,7 @@
 
 ## Overview
 
-Coffeehouse is a web application designed to provide users with an enjoyable shopping experience for coffee products. Built using React.js and styled with Tailwind CSS, Coffeehouse offers a sleek and responsive interface for browsing and purchasing coffee items. The project includes a fully functional shopping cart feature that stores data in session storage, ensuring a seamless user experience.
+Coffeehouse is a web application designed to provide users with an enjoyable shopping experience for coffee products. Built using React, JavaScript and styled with Tailwind CSS, Coffeehouse offers a sleek and responsive interface for browsing and purchasing coffee items. The project includes a fully functional shopping cart feature that stores data in session storage, ensuring a seamless user experience.
 
 ## Features
 
@@ -56,10 +56,9 @@ To view the website online, visit [https://karolfaltyn.github.io/coffeehouse/](h
 
 ## Technologies Used
 
--   HTML
--   Tailwind
--   JavaScript
 -   React
+-   JavaScript
+-   Tailwind CSS
 -   PostCSS
 
 ## License
